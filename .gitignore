@@ -1,0 +1,48 @@
+# Basics
+*.py[cod]
+*.pyc
+__pycache__
+
+# Logs
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+*.pot
+
+# Vagrant
+.vagrant
+
+# Pycharm
+.idea
+
+# Vim
+
+*~
+*.swp
+*.swo
+
+# npm
+node_modules/
+
+# Compass
+.sass-cache
+
+#ipython
+notebooks/
+
+#Vagrant
+
+ansible/
+build/
+local.py
+production.py
+staticfiles/
+
+style.css.map

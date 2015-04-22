@@ -1,0 +1,70 @@
+
+.guide {
+    ul.nav {
+        margin: 20px 0;
+    }
+    .menu {
+
+        > li {
+
+            &.active {
+                > .nav {
+                    display: block;
+                }
+
+                > a {
+                    background: #DEEAF1;
+                }
+            }
+
+            a {
+                color: #3391C9;
+                font-weight: 500;
+                font-size: 13px;
+                padding: 10px 15px 10px 25px;
+
+                @include transition(all .15s linear);
+
+                &:hover {
+                    background: #DEEAF1;
+                }
+            }
+
+            > .nav {
+                margin: 100px 0 50px 0;
+                display: none;
+
+                li {
+                    a {
+                        font-weight: 400;
+                        color: #48A0D6;
+                        padding: 6px 15px 5px 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.api-docs {
+    padding: 0 30px;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 40px;
+
+    h3 {
+        font-size: 21px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 13px;
+        color: #666;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+

@@ -1,0 +1,43 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+    {% include "units/header.jinja" with header_class='navbar navbar-inverse normal' logo=True %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 guide">
+                <ul class="menu nav">
+                    <li role="presentation" class="dropdown-header">DOCUMENTATION</li>
+                    <li>
+                        <a href="#intro">Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#authentication">Authentication</a>
+                    </li>
+                    <li>
+                        <a href="#rate">Rate limiting</a>
+                    </li>
+                    <li role="presentation" class="dropdown-header">RESOURCES</li>
+                    <li><a href="#root">Root</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#expansions">Expansions</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#publishers">Publishers</a></li>
+                    <li><a href="#designers">Designers</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#mechanics">Mechanics</a></li>
+                    <li><a href="#families">Families</a></li>
+                    <li><a href="#subdomains">Subdomains</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 api-docs">
+                {% load markdown_deux_tags %}
+                {% markdown %}
+                    {% include "docs/docs.md" %}
+                {% endmarkdown %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+</html>

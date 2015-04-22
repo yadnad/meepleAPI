@@ -1,0 +1,116 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+    {% include "units/header.jinja" with header_class='navbar navbar-inverse normal' logo=True %}
+
+    <div id="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>What is meepleAPI?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>meepleAPI is RESTful API with all board game data.</p>
+
+                    <p>We present to you all board games, promos, expansions, artists, designers,
+                        publishers, categories, mechanics and more.</p>
+
+                    <p>
+                        Check out the <a href="{% url 'docs' %}">documentation</a> to get started
+                        consuming meepleAPI data. </p>
+                </div>
+            </div>
+            <div class="row stats">
+                {% for stat in stats %}
+                    <div class="col-sm-4">
+                        <strong>{{ stat.count }}</strong> {{ stat.resource }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>How it is build?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>We're using <a href="https://djangoproject.com">Django</a> and <a
+                            href="https://django-rest-framework.org">Django REST Framework</a> to
+                        serve a <a href="https://en.wikipedia.org/wiki/REST">RESTful</a> API to you.
+                    </p>
+
+                    <p>
+                        The data is all formatted in JSON and <a
+                            href="http://en.wikipedia.org/wiki/HATEOAS">HATEOAS</a> principle. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Questions & Support</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        If you have any questions, bugs, or suggestions, please report them via <a
+                            href="https://github.com/MihaZelnik/meepleAPI/issues">Github Issues</a>
+                        or <a href="mailto:miha.zelnik@gmail.com">email</a>. </p>
+
+                    <p>
+                        We'd love to hear your feedback and ideas! </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Copyright and stuff?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        This project is open source and carries a <a
+                            href="http://opensource.org/licenses/BSD-3-Clause">BSD licence</a>. </p>
+
+                    <p>
+                        All data has been collected from <a href="https://boardgamegeek.com/">boardgamegeek.com</a>
+                        and it is under <a
+                            href="https://boardgamegeek.com/wiki/page/XML_API_Terms_of_Use">XML API
+                        Terms of Use</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Contributing & Contributors</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        This is an open source project and we love involvement from the community!
+                        Hit us up with pull requests and issues. </p>
+
+                    <p>
+                        meepleAPI would not be possible without contributions from the following
+                        people:
+                    <ul>
+                        <li><a href="https://twitter.com/MihaZelnik" target="_blank">Miha Zelnik</a>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {% load markdown_deux_tags %}
+                    {% markdown %}
+                        {% include "CHANGELOG.md" %}
+                    {% endmarkdown %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

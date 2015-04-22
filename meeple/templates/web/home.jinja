@@ -1,0 +1,66 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+    {% include "units/header.jinja" with header_class='navbar navbar-inverse hero' logo=False %}
+
+    <div id="hero">
+        <div class="container">
+            <h1 class="hero-text animated logo__white fadeInDown">
+                meeple{% include "snippets/logo.jinja" with width='50px' height='50px' %}PI
+            </h1>
+
+            <p class="sub-text animated fadeInDown">
+                RESTful board games API with more than 75.000 games, promos and expansions.
+            </p>
+
+            <p class="sub-text animated fadeInDown">
+                BETA <br/> still in development
+            </p>
+            <p class="sub-text animated fadeInDown">
+                                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://api.meeple.co" data-text="meepleAPI - RESTful board games API" data-via="MihaZelnik">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="second-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 feature">
+                    <strong>What is this?</strong>
+
+                    <p>
+                        meepleAPI is RESTful API for board games with more than 75.000 games, promos and expansions.
+                        We are using JSON format and <a href="http://en.wikipedia.org/wiki/HATEOAS">HATEOAS</a>
+                        principle.
+                    </p>
+
+                </div>
+                <div class="col-md-4 feature">
+                    <strong>How can I use it?</strong>
+
+                    <p>
+                        All the data is accessible through our HTTP web API. Consult our
+                        <a href="{% url 'docs' %}">documentation</a> if you'd like to get started.
+                    </p>
+                </div>
+                <div class="col-md-4 feature">
+                    <strong>How can I contribute?</strong>
+
+                    <p>This project is open source and you can contribute on <a
+                            href="https://github.com/MihaZelnik/meepleAPI">GitHub</a>.</p>
+
+                    <p> Join a slack community of board gamers and coders who are interested in building board game tools.
+                    </p>
+
+                    <p>
+                        <script async defer
+                                src="https://meeple-slack.herokuapp.com/slackin.js"></script>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
