@@ -88,7 +88,7 @@ All board games (without expansions and promos)
 - ```/v1/games/?object_id=:object_id``` -- object_id is BGG id.
 - ```/v1/games/?object_id=:object_id,object_id,object_id``` -- you can add multiple ids, they need to be seperate by `,`
 
-This is used for mapping BGG games with this API. Because games and expansions are different resources you can get empty list back, because objects id is expansion and not game. In that case you need to do another request to expansions endpoint or use geek endpoint.
+This is used for mapping BGG games with this API. Because games and expansions are different resources you can get empty list back, because objects id is expansion and not game. In that case you need to do another request to expansions endpoint.
 
 ###Views
 
@@ -241,7 +241,7 @@ All expansions and promos
 - ```/v1/expanisons/?object_id=:object_id``` -- object_id is BGG id.
 - ```/v1/expanisons/?object_id=:object_id,object_id,object_id``` -- you can add multiple ids, they need to be seperate by `,`
 
-This is used for mapping BGG expanisons with this API. Because games and expansions are different resources you can get empty list back, because objects id is game and not expanison. In that case you need to do another request to games endpoint or use geek endpoint.
+This is used for mapping BGG expanisons with this API. Because games and expansions are different resources you can get empty list back, because objects id is game and not expanison. In that case you need to do another request to games endpoint.
 
 ###Views
 
